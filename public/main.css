@@ -1,0 +1,39 @@
+#map {
+  height: 600px;
+  width: 800px;
+}
+
+html { 
+  background: url(https://il6.picdn.net/shutterstock/videos/2350718/thumb/1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  width: 800px;
+  margin: 0 auto;
+}
+
+#pagetitle{
+  width: 600px;
+  margin: 0 auto;
+  color: #fff;
+  
+}
+
+#text{
+  width: 600px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+#shadowbox{
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba( 0, 0, 0, 0.65 );
+  padding: 30px 30px;
+}
+
