@@ -1,15 +1,19 @@
 window.onload = function () {
     var url = 'https://restcountries.eu/rest/v1'
     var request = new XMLHttpRequest();
+    ///// this is the ajax request above and we have made it an object called 'request'. We then call functions on this request object below.
     request.open("GET", url);
     request.onload = function () {
         if (request.status === 200) {
             var jsonString = request.responseText;
+            ///// The '.responseText' just selects all of the info/data from the url that we have requested in the GET request above (it will be in string form) and we set this to a variable 'jsonString' so that we can then parse it below. 
             var countries = JSON.parse(jsonString);
+            //// The parse just turns the string (the info/data) we get from the API into a javascript object (a big collection/array type thing with all the info of all the countries) that we can then use.
             main(countries);
         }
     }
     request.send(null);
+    //// this is the request to 'run' the ajax request. eg line 3 we make a new ajax request, line 5 we set the ajax as a get request asking for the url info of the REST countries API, then we attach an '.onload' to the ajax request which will wait for the page to be loaded before running the stuff inside its function. The request.send(null) is just sending off the ajax request but the info it loads isnt used until the page is loaded (the onload part)
 
 };
 
